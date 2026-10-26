@@ -8,11 +8,11 @@
   <meta property="og:title" content="Белый город — ресторан и банкетный зал">
   <meta property="og:description" content="Кавказская кухня, шашлык на углях, живая музыка и банкеты до 170 гостей. Москва, Петрозаводская ул., 1.">
   <meta property="og:image" content="assets/img/hall-wide.webp">
-  <meta name="theme-color" content="#14313f">
+  <meta name="theme-color" content="#e9e1d3">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <script type="application/ld+json">
   {
@@ -32,631 +32,540 @@
 </head>
 <body>
 
-<!-- ========== HEADER ========== -->
-<header class="header" id="header">
-  <div class="container header__inner">
-    <a href="#top" class="logo" aria-label="Белый город — на главную">
-      <span class="logo__mark" aria-hidden="true"><i></i><b>BG</b><i></i></span>
-      <span class="logo__text">Белый город<small>ресторан</small></span>
-    </a>
-    <nav class="nav" id="nav" aria-label="Основная навигация">
-      <a href="#about">О нас</a>
-      <a href="#menu">Меню</a>
-      <a href="#banquets">Банкеты</a>
-      <a href="#offers">Акции</a>
-      <a href="#gallery">Галерея</a>
-      <a href="#reviews">Отзывы</a>
-      <a href="#contacts">Контакты</a>
-      <a href="tel:+79269269222" class="nav__phone-mobile">+7 (926) 926-92-22</a>
-    </nav>
-    <div class="header__actions">
-      <a href="tel:+79269269222" class="header__phone">+7 (926) 926-92-22</a>
-      <a href="#booking" class="btn btn--gold btn--sm">Забронировать</a>
-      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
-    </div>
+<!-- иконки -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M16 12.5h2M3 9h18"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.3 3-5 6-5s5.4 1.7 6 5"/><path d="M15.5 5.3a3 3 0 0 1 0 5.6M17.5 14.3c1.8.6 3 2.2 3.5 4.7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.5l1.5 4-2 1.3a11 11 0 0 0 6.7 6.7L16 14l4 1.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M4 20l1.2-4.2A8 8 0 1 1 8.4 19z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 .9a5 5 0 0 1-2.8-2.8l.9-1-1-2z"/></symbol>
+  <symbol id="i-tg" viewBox="0 0 24 24"><path d="M21 4L3 11l6 2 2 6 3-4 5 4z"/><path d="M9 13l9-7"/></symbol>
+  <symbol id="i-vk" viewBox="0 0 24 24"><path d="M3 7h3c.5 3 2 5.5 4 6V7h3v3.5c1.3-.2 3-2 3.7-3.5H20c-.6 2.4-2.4 4.2-3.6 5 1.4.6 3.4 2.3 4 5h-3.2c-.6-1.7-2-3-4.2-3.2V17H12C6.5 17 3.4 13 3 7z"/></symbol>
+</svg>
+
+<!-- ========== ШАПКА ========== -->
+<header class="bar" id="bar">
+  <a href="#top" class="emblem" aria-label="Белый город — на главную">
+    <span class="emblem__mark">Б<i>Г</i></span>
+    <span class="emblem__name">Белый город</span>
+  </a>
+  <nav class="bar__nav" id="nav" aria-label="Основная навигация">
+    <a href="#kitchen">Кухня</a>
+    <a href="#menu">Меню</a>
+    <a href="#celebrations">Праздники</a>
+    <a href="#offers">Акции</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#contacts">Контакты</a>
+    <a href="tel:+79269269222" class="bar__nav-phone">+7 (926) 926-92-22</a>
+  </nav>
+  <div class="bar__end">
+    <a href="tel:+79269269222" class="round-btn round-btn--line bar__call" aria-label="Позвонить"><svg><use href="#i-phone"/></svg></a>
+    <a href="#reserve" class="pill pill--line bar__book">Забронировать</a>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <main id="top">
 
-<!-- ========== HERO ========== -->
-<section class="hero" aria-label="Ресторан Белый город">
-  <div class="hero__slides" aria-hidden="true">
-    <div class="hero__slide is-active" style="background-image:url(assets/img/hall-wide.webp)"></div>
+<!-- ========== ПЕРВЫЙ ЭКРАН ========== -->
+<section class="sheet sheet--ink hero" aria-label="Ресторан Белый город">
+  <div class="hero__media" aria-hidden="true">
+    <div class="hero__slide is-on" style="background-image:url(assets/img/hall-wide.webp)"></div>
     <div class="hero__slide" style="background-image:url(assets/img/wed-boho.webp)"></div>
     <div class="hero__slide" style="background-image:url(assets/img/banq-1.webp)"></div>
-    <div class="hero__slide" style="background-image:url(assets/img/show-lezginka.webp)"></div>
+    <div class="hero__slide" style="background-image:url(assets/img/hall-teal.webp)"></div>
+    <!-- положите assets/video/hero.mp4 — видео включится вместо слайдов автоматически -->
+    <video class="hero__video" muted loop playsinline data-src="assets/video/hero.mp4"></video>
   </div>
-  <!-- положите assets/video/hero.mp4 — видео включится вместо слайдов автоматически -->
-  <video class="hero__video" muted loop playsinline aria-hidden="true" data-src="assets/video/hero.mp4"></video>
-  <div class="hero__shade"></div>
 
-  <div class="container hero__content">
-    <p class="eyebrow eyebrow--light reveal">Ресторан · Банкетный зал · Москва</p>
-    <h1 class="hero__title reveal">Белый<br><em>город</em></h1>
-    <p class="hero__lead reveal">Кавказское гостеприимство в интерьере белого мрамора и синего бархата. Шашлык на углях, шах-плов с огнём и живая музыка каждый вечер.</p>
-    <div class="hero__cta reveal">
-      <a href="#booking" class="btn btn--gold">Забронировать стол</a>
-      <a href="#banquets" class="btn btn--ghost">Рассчитать банкет</a>
+  <div class="hero__inner">
+    <p class="kicker kicker--light rise">Ресторан · Банкетный зал · Москва</p>
+    <h1 class="hero__title rise">Белый <em>город</em></h1>
+    <p class="hero__sub rise">Вечер, который хочется повторить</p>
+    <div class="hero__cta rise">
+      <a href="#reserve" class="pill pill--caramel">Забронировать стол</a>
+      <a href="#menu" class="pill pill--glass">Смотреть меню</a>
     </div>
   </div>
 
-  <div class="hero__badge" aria-label="Рейтинг 4,4 на Яндекс Картах">
-    <svg viewBox="0 0 200 200" class="hero__badge-ring" aria-hidden="true">
-      <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
-      <text><textPath href="#circ">1120 оценок гостей · Яндекс Карты · 1120 оценок гостей · Яндекс Карты ·</textPath></text>
-    </svg>
-    <div class="hero__badge-core"><strong>4,4</strong><span>★★★★★</span></div>
-  </div>
+  <button class="hero__arrow hero__arrow--prev" id="heroPrev" aria-label="Предыдущий кадр"><svg><use href="#i-arrow"/></svg></button>
+  <button class="hero__arrow hero__arrow--next" id="heroNext" aria-label="Следующий кадр"><svg><use href="#i-arrow"/></svg></button>
 
-  <div class="hero__dots" aria-hidden="true"><span class="is-active"></span><span></span><span></span><span></span></div>
-  <a href="#info" class="hero__scroll">Прокрутите<span></span></a>
+  <div class="hero__progress" aria-hidden="true"><i class="is-on"></i><i></i><i></i><i></i></div>
+
+  <img class="hero__plate" src="assets/img/plate-caprese.webp" alt="" aria-hidden="true">
 </section>
 
-<!-- ========== QUICK INFO ========== -->
-<section class="info" id="info">
-  <div class="container info__grid">
-    <div class="info__item">
-      <span class="info__label">Сегодня</span>
-      <span class="info__value" id="todayHours">11:00 — 00:00</span>
-      <span class="info__sub">Пт–Сб до 03:00</span>
+<!-- ========== КОРОТКО ========== -->
+<section class="facts" aria-label="Коротко о ресторане">
+  <div class="fact rise"><svg><use href="#i-clock"/></svg><div><b id="todayHours">Сегодня до 00:00</b><span>Пт и Сб — до 03:00</span></div></div>
+  <div class="fact rise"><svg><use href="#i-pin"/></svg><div><b>Петрозаводская, 1</b><span>м. Беломорская, Ховрино</span></div></div>
+  <div class="fact rise"><svg><use href="#i-wallet"/></svg><div><b>1000–1500 ₽</b><span>средний чек, ланч — 600 ₽</span></div></div>
+  <div class="fact rise"><svg><use href="#i-users"/></svg><div><b>До 170 гостей</b><span>3 зала для праздника</span></div></div>
+</section>
+
+<!-- ========== КУХНЯ И АТМОСФЕРА (бенто) ========== -->
+<section class="bento" id="kitchen">
+  <article class="card card--paper bento__left rise">
+    <h2 class="title">Где кавказское гостеприимство встречает тихую роскошь</h2>
+    <p class="lead">«Белый город» — элегантный ресторан на Петрозаводской улице. Белый мрамор, бархат цвета морской волны, хрустальные люстры и запах мангала — здесь отмечают главные события и просто ужинают с семьёй.</p>
+    <div class="quad">
+      <img src="assets/img/hall-chandelier.webp" alt="Зал с хрустальной люстрой" loading="lazy">
+      <img src="assets/img/f-khinkali.webp" alt="Хинкали" loading="lazy">
+      <img src="assets/img/show-lezginka.webp" alt="Танец на празднике" loading="lazy">
+      <img src="assets/img/f-pork-neck.webp" alt="Шашлык на углях" loading="lazy">
     </div>
-    <div class="info__item">
-      <span class="info__label">Адрес</span>
-      <span class="info__value">Петрозаводская, 1</span>
-      <span class="info__sub">м. Беломорская · Ховрино</span>
+  </article>
+
+  <article class="card card--paper bento__right rise">
+    <h2 class="title title--sm">Три кухни, один огонь</h2>
+    <p class="lead">Кавказская, европейская и русская кухня. Салаты с мясом и рыбой, копчёный грузинский сыр, хачапури, садж и насыщенные супы. На углях — шашлыки, люля и бастурма из телятины. В винной карте — Старый Свет, Грузия и Азербайджан.</p>
+    <hr>
+    <p class="label">С мангала</p>
+    <div class="strip">
+      <img src="assets/img/f-lulya.webp" alt="Люля-кебаб" loading="lazy">
+      <img src="assets/img/f-tabaka.webp" alt="Цыплёнок табака" loading="lazy">
+      <img src="assets/img/f-lamb-chops.webp" alt="Каре ягнёнка" loading="lazy">
     </div>
-    <div class="info__item">
-      <span class="info__label">Средний чек</span>
-      <span class="info__value">1000–1500 ₽</span>
-      <span class="info__sub">Бизнес-ланч — 600 ₽</span>
+    <p class="label">Для души</p>
+    <div class="strip strip--two">
+      <img src="assets/img/f-plov.webp" alt="Плов" loading="lazy">
+      <img src="assets/img/drink-aperol.webp" alt="Апероль" loading="lazy">
     </div>
-    <div class="info__item">
-      <span class="info__label">Банкеты</span>
-      <span class="info__value">до 170 гостей</span>
-      <span class="info__sub">3 зала · от 3000 ₽/чел</span>
+    <ul class="tags" aria-label="Особенности">
+      <li>Живая музыка с 19:00</li><li>Бесплатная парковка</li><li>Веранда у пруда</li><li>Халяль</li><li>Детское меню</li><li>Танцпол</li><li>Паровые коктейли</li><li>Wi‑Fi</li><li>Намазхана</li><li>Пробковый сбор</li>
+    </ul>
+  </article>
+</section>
+
+<!-- ========== МЕНЮ ========== -->
+<section class="sheet sheet--canvas menu" id="menu">
+  <div class="menu__top">
+    <div class="menu__intro rise">
+      <h2 class="title">Наше меню</h2>
+      <p class="lead">Девяносто с лишним позиций: от холодных закусок до наборов с мангала на большую компанию. Нажмите на тарелку — откроется раздел.</p>
+    </div>
+
+    <div class="stage rise" aria-label="Разделы меню">
+      <button class="podium podium--1" data-cat="Закуски">
+        <img src="assets/img/plate-caprese.webp" alt="" loading="lazy">
+        <span class="podium__block"></span>
+        <span class="podium__name">Закуски</span>
+      </button>
+      <button class="podium podium--2" data-cat="Салаты">
+        <img src="assets/img/plate-salmon-salad.webp" alt="" loading="lazy">
+        <span class="podium__block"></span>
+        <span class="podium__name">Салаты</span>
+      </button>
+      <button class="podium podium--3" data-cat="Горячие закуски">
+        <img src="assets/img/plate-shrimp-salad.webp" alt="" loading="lazy">
+        <span class="podium__block"></span>
+        <span class="podium__name">Горячие закуски</span>
+      </button>
+      <a href="#menuBoard" class="stage__plus" aria-label="Всё меню"><svg><use href="#i-plus"/></svg></a>
+    </div>
+
+    <a href="#menuBoard" class="photo-card menu__grill rise" data-cat-link="Шашлык & Гриль">
+      <img src="assets/img/f-assorti.webp" alt="Ассорти с мангала" loading="lazy">
+      <span class="photo-card__title">Шашлык <em>&amp; гриль</em></span>
+      <span class="photo-card__text">16 позиций с открытого огня: от свиной шейки до бастурмы и форели целиком</span>
+    </a>
+  </div>
+
+  <div class="board rise" id="menuBoard">
+    <div class="chips" id="menuChips" role="tablist" aria-label="Разделы меню"></div>
+    <h3 class="board__title" id="menuTitle"></h3>
+    <div class="board__list" id="menuList" role="tabpanel"></div>
+    <p class="board__note">«Уточняйте» — блюдо есть в меню, актуальную цену подскажет официант. Цены могут меняться.</p>
+  </div>
+</section>
+
+<!-- ========== ФИРМЕННОЕ ========== -->
+<section class="sheet sheet--ink signature" id="signature">
+  <div class="discover rise">
+    <img src="assets/img/show-plov-fire.webp" alt="Шах-плов выносят в огне" loading="lazy" class="discover__img">
+    <div class="discover__text">
+      <p class="kicker kicker--light">Визитная карточка</p>
+      <h2 class="title title--light">Шах&#8209;плов, <em>который выносят в&nbsp;огне</em></h2>
+      <p>Плов в хрустящем лаваше поджигают у стола и разрезают под музыку и танец официантов. Гости называют это «целым представлением» — его заказывают на юбилеи, свадьбы и корпоративы.</p>
+      <a href="#reserve" class="pill pill--caramel pill--sm">Заказать к празднику</a>
+    </div>
+  </div>
+
+  <div class="duo-row">
+    <article class="duo duo--text rise">
+      <h3>Шашлык из свиной шейки</h3>
+      <p>Сочная шея в маринаде, жарится на углях. 180 г</p>
+      <span class="price-pill">990 ₽</span>
+    </article>
+    <figure class="duo duo--photo rise"><img src="assets/img/f-pork-neck.webp" alt="Шашлык из свиной шейки" loading="lazy"></figure>
+    <article class="duo duo--text rise">
+      <h3>Люля-кебаб из баранины</h3>
+      <p>С красным луком и зеленью, подаётся с соусом. 180 г</p>
+      <span class="price-pill">1090 ₽</span>
+    </article>
+    <figure class="duo duo--photo rise"><img src="assets/img/f-lulya.webp" alt="Люля-кебаб" loading="lazy"></figure>
+    <figure class="duo duo--photo rise"><img src="assets/img/f-tabaka.webp" alt="Цыплёнок табака" loading="lazy"></figure>
+    <article class="duo duo--text rise">
+      <h3>Цыплёнок табака</h3>
+      <p>Хрустящая корочка и пикантный соус. 350 г</p>
+      <span class="price-pill">950 ₽</span>
+    </article>
+    <figure class="duo duo--photo rise"><img src="assets/img/f-plov.webp" alt="Узбекский плов" loading="lazy"></figure>
+    <article class="duo duo--text rise">
+      <h3>Узбекский плов</h3>
+      <p>Говядина, рис, морковь, барбарис и чеснок. 300 г</p>
+      <span class="price-pill">790 ₽</span>
+    </article>
+  </div>
+</section>
+
+<!-- ========== НАБОРЫ ========== -->
+<section class="sets" id="sets">
+  <div class="card card--paper sets__card rise">
+    <div class="sets__text">
+      <p class="kicker">На большую компанию</p>
+      <h2 class="title title--sm">Наборы с мангала</h2>
+      <p class="lead">Мясо разных видов, люля, молодой картофель и овощи с огня, лаваш, аджика и ткемали — на большой доске, чтобы делить.</p>
+      <ul class="sets__list" id="setsList"></ul>
+    </div>
+    <div class="sets__media">
+      <img src="assets/img/f-grill-veg.webp" alt="Овощи с мангала" loading="lazy">
+      <span class="sets__badge"><b>2–8</b>гостей</span>
     </div>
   </div>
 </section>
 
-<!-- ========== 01 ABOUT ========== -->
-<section class="about section" id="about">
-  <div class="container about__grid">
-    <div class="about__text">
-      <span class="num reveal">01</span>
-      <h2 class="h2 reveal">О ресторане</h2>
-      <span class="rule reveal"></span>
-      <p class="reveal">«Белый город» — элегантный ресторан на Петрозаводской улице. В меню блюда кавказской, европейской и русской кухонь: салаты с мясом и рыбой, копчёный грузинский сыр, хачапури и овощные ассорти. На горячее — насыщенные супы, садж, а на углях жарят шашлыки, люля и бастурму из телятины.</p>
-      <p class="reveal">В винной карте — позиции Старого Света, вина Азербайджана и Грузии. Ресторан можно арендовать под собственное мероприятие: здесь комфортно разместится до 170 человек. По вечерам — живая музыка, танцпол и шоу-программа, а летом — веранда с видом на пруд.</p>
-      <div class="stats reveal">
-        <div class="stat"><strong data-count="170">0</strong><span>гостей на банкете</span></div>
-        <div class="stat"><strong data-count="3">0</strong><span>зала</span></div>
-        <div class="stat"><strong data-count="90" data-suffix="+">0</strong><span>блюд в меню</span></div>
-        <div class="stat"><strong>4,4</strong><span>рейтинг на Яндексе</span></div>
+<!-- ========== ПРАЗДНИКИ ========== -->
+<section class="sheet sheet--paper celebrations" id="celebrations">
+  <div class="center-head rise">
+    <p class="kicker">Банкеты до 170 гостей</p>
+    <h2 class="title">Праздник, о котором <em>будут вспоминать</em></h2>
+    <p class="lead">Берём на себя всё: меню, декор, ведущего, музыку и шоу. Выберите повод — расскажем, как это будет.</p>
+  </div>
+
+  <div class="occasions rise" role="tablist" aria-label="Повод">
+    <button class="occasion is-on" data-event="wedding" role="tab" aria-selected="true"><img src="assets/img/wed-presidium.webp" alt="" loading="lazy"><span>Свадьба</span></button>
+    <button class="occasion" data-event="birthday" role="tab" aria-selected="false"><img src="assets/img/banq-2.webp" alt="" loading="lazy"><span>Юбилей</span></button>
+    <button class="occasion" data-event="corporate" role="tab" aria-selected="false"><img src="assets/img/party-1.webp" alt="" loading="lazy"><span>Корпоратив</span></button>
+    <button class="occasion" data-event="family" role="tab" aria-selected="false"><img src="assets/img/banq-4.webp" alt="" loading="lazy"><span>Семья</span></button>
+  </div>
+
+  <div class="occasion-card rise" id="eventCard">
+    <div class="occasion-card__text">
+      <h3 id="eventTitle">Свадьба, о которой будут вспоминать</h3>
+      <p id="eventText">Президиум с живыми цветами, троны для молодожёнов, арка и выездная регистрация прямо в ресторане. Ведущий, DJ, первый танец в тяжёлом дыму и лезгинка до утра.</p>
+      <ul class="dots" id="eventList">
+        <li>Оформление зала и президиума</li><li>Свадебная арка и выездная церемония</li><li>Ведущий и DJ</li><li>Шоу-программа и национальные танцы</li>
+      </ul>
+      <a href="#calc" class="text-link">Рассчитать стоимость <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <img id="eventImg" src="assets/img/wed-boho.webp" alt="Оформление свадьбы" loading="lazy">
+  </div>
+
+  <div class="halls">
+    <article class="hall rise">
+      <img src="assets/img/hall-1.webp" alt="Большой зал" loading="lazy">
+      <div class="hall__info"><h3>Большой зал</h3><p>Мрамор, хрустальные люстры, сцена и танцпол</p><span class="cap-pill">до 120 гостей</span></div>
+    </article>
+    <article class="hall rise">
+      <img src="assets/img/hall-long.webp" alt="Малый зал" loading="lazy">
+      <div class="hall__info"><h3>Малый зал</h3><p>Камерный зал за портьерой — тише, но рядом</p><span class="cap-pill">до 30 гостей</span></div>
+    </article>
+    <article class="hall rise">
+      <img src="assets/img/veranda.webp" alt="Летняя веранда" loading="lazy">
+      <div class="hall__info"><h3>Летняя веранда</h3><p>Вид на пруд, свежий воздух и мангал рядом</p><span class="cap-pill">до 40 гостей</span></div>
+    </article>
+  </div>
+
+  <div class="show rise">
+    <div class="show__photos">
+      <img src="assets/img/show-tanoura.webp" alt="Шоу танура" loading="lazy">
+      <img src="assets/img/show-dancer.webp" alt="Национальный танец" loading="lazy">
+      <img src="assets/img/show-wedding-dance.webp" alt="Первый танец" loading="lazy">
+    </div>
+    <div class="show__text">
+      <h3 class="title title--sm">Шоу-программа</h3>
+      <p>Восточные танцы, огненная танура, лезгинка и египетский танец. DJ, который ещё и поёт. А на десерт — танец официантов и шах-плов в огне.</p>
+      <ul class="dots">
+        <li>Живая музыка каждый день с 19:00</li><li>Ведущий и DJ</li><li>Украшение зала, арка на свадьбу</li><li>Свой алкоголь — с пробковым сбором</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- калькулятор -->
+  <div class="calc rise" id="calc">
+    <div class="calc__form">
+      <h3 class="title title--sm">Посчитайте свой банкет</h3>
+      <p class="muted">Ориентировочная стоимость. Точную смету составит администратор.</p>
+
+      <div class="calc__row">
+        <span class="label">Гостей</span>
+        <div class="stepper">
+          <button type="button" id="guestsMinus" aria-label="Меньше гостей">−</button>
+          <output id="guestsOut">40</output>
+          <button type="button" id="guestsPlus" aria-label="Больше гостей">+</button>
+        </div>
+        <input type="range" id="guests" min="10" max="170" step="5" value="40" aria-label="Количество гостей">
       </div>
-      <a href="#menu" class="link-arrow reveal">Смотреть меню</a>
+
+      <div class="calc__row">
+        <span class="label">Банкетное меню</span>
+        <div class="segment" role="radiogroup" aria-label="Банкетное меню">
+          <label><input type="radio" name="pkg" value="3000" checked><span><b>Классика</b>3000 ₽</span></label>
+          <label><input type="radio" name="pkg" value="4500"><span><b>Кавказский стол</b>4500 ₽</span></label>
+          <label><input type="radio" name="pkg" value="6000"><span><b>Царский</b>6000 ₽</span></label>
+        </div>
+      </div>
+
+      <div class="calc__row">
+        <span class="label">Дополнительно</span>
+        <div class="toggles">
+          <label><input type="checkbox" value="25000" data-name="Ведущий и DJ"><span>Ведущий и DJ · от 25 000 ₽</span></label>
+          <label><input type="checkbox" value="30000" data-name="Оформление зала"><span>Оформление · от 30 000 ₽</span></label>
+          <label><input type="checkbox" value="20000" data-name="Шоу-программа"><span>Шоу · от 20 000 ₽</span></label>
+          <label><input type="checkbox" value="0" data-name="Шах-плов с огнём"><span>Шах-плов · по запросу</span></label>
+        </div>
+      </div>
     </div>
-    <div class="about__collage">
-      <figure class="about__img about__img--tall reveal"><img src="assets/img/hall-chandelier.webp" alt="Зал ресторана с хрустальной люстрой" loading="lazy"></figure>
-      <figure class="about__img about__img--a reveal"><img src="assets/img/f-khinkali.webp" alt="Хинкали" loading="lazy"></figure>
-      <figure class="about__img about__img--b reveal"><img src="assets/img/show-plov-fire.webp" alt="Подача шах-плова с огнём" loading="lazy"></figure>
+    <div class="calc__sum">
+      <span>Ориентировочно</span>
+      <strong id="calcTotal">120 000 ₽</strong>
+      <small id="calcPer">≈ 3000 ₽ на гостя</small>
+      <a href="#" class="pill pill--caramel" id="calcSend" target="_blank" rel="noopener">Отправить в WhatsApp</a>
+      <a href="tel:+79269269222" class="calc__tel">или позвоните +7 (926) 926-92-22</a>
     </div>
   </div>
+</section>
 
-  <div class="container">
-    <ul class="features reveal" aria-label="Особенности ресторана">
-      <li>Живая музыка ежедневно</li>
-      <li>Бесплатная парковка</li>
-      <li>Летняя веранда у пруда</li>
-      <li>Халяль</li>
-      <li>Детское меню</li>
-      <li>Танцпол и DJ</li>
-      <li>Винная карта</li>
-      <li>Бестабачные паровые коктейли</li>
-      <li>Спортивные трансляции</li>
-      <li>Настольные игры</li>
-      <li>Wi-Fi</li>
-      <li>Намазхана</li>
-      <li>Пробковый сбор</li>
-      <li>Подарочные сертификаты</li>
+<!-- ========== АКЦИИ ========== -->
+<section class="sheet sheet--canvas offers" id="offers">
+  <div class="center-head rise">
+    <h2 class="title">Приятные поводы зайти</h2>
+  </div>
+  <div class="offer-row">
+    <article class="offer offer--text rise">
+      <span class="offer__when">Будни 12:00–16:00</span>
+      <h3>−20% на всё меню</h3>
+      <p>Днём по будням — скидка на всё меню ресторана.</p>
+      <a href="#reserve" class="pill pill--ink pill--sm">Забронировать</a>
+    </article>
+    <figure class="offer offer--photo rise"><img src="assets/img/f-steak.webp" alt="" loading="lazy"></figure>
+    <article class="offer offer--text rise">
+      <span class="offer__when">День рождения</span>
+      <h3>До −30% на весь счёт</h3>
+      <p>За три дня до и три дня после праздника.</p>
+      <a href="#reserve" class="pill pill--ink pill--sm">Забронировать</a>
+    </article>
+    <figure class="offer offer--photo rise"><img src="assets/img/banq-2.webp" alt="" loading="lazy"></figure>
+    <figure class="offer offer--photo rise"><img src="assets/img/drink-aperol.webp" alt="" loading="lazy"></figure>
+    <article class="offer offer--text rise">
+      <span class="offer__when">Бар</span>
+      <h3>Апероль 1+1=3</h3>
+      <p>Два коктейля — третий в подарок.</p>
+    </article>
+    <figure class="offer offer--photo rise"><img src="assets/img/bar-man.webp" alt="" loading="lazy"></figure>
+    <article class="offer offer--text rise">
+      <span class="offer__when">Соцсети</span>
+      <h3>Коктейль в подарок</h3>
+      <p>За сторис с отметкой ресторана.</p>
+    </article>
+  </div>
+
+  <div class="twins">
+    <article class="card card--ink lunch rise">
+      <div>
+        <p class="kicker kicker--light">Бизнес-ланч · Пн–Пт 12:00–16:00</p>
+        <h3 class="title title--sm title--light">Обед из четырёх блюд</h3>
+        <ul class="lunch__list">
+          <li><b>Салат</b>овощной или «Цезарь»</li>
+          <li><b>Суп</b>куриный с лапшой или солянка</li>
+          <li><b>Горячее</b>с гарниром на выбор</li>
+          <li><b>Напиток</b>морс, чай или кофе</li>
+        </ul>
+      </div>
+      <span class="lunch__price">600 ₽</span>
+    </article>
+    <article class="card card--paper gift rise">
+      <div class="gift__ticket" aria-hidden="true"><span class="emblem__mark">Б<i>Г</i></span><b>5 000 ₽</b><small>подарочный сертификат</small></div>
+      <h3 class="title title--sm">Подарите вечер</h3>
+      <p class="lead">Сертификат на 3 000, 5 000, 10 000 ₽ или любую сумму — в красивом конверте.</p>
+      <a href="https://wa.me/79269269222?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D0%B0%D1%80%D0%BE%D1%87%D0%BD%D1%8B%D0%B9%20%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82" class="text-link" target="_blank" rel="noopener">Заказать сертификат <svg><use href="#i-arrow"/></svg></a>
+    </article>
+  </div>
+</section>
+
+<!-- ========== АФИША ========== -->
+<section class="sheet sheet--paper afisha" id="afisha">
+  <div class="afisha__grid">
+    <div class="afisha__head rise">
+      <p class="kicker">Афиша</p>
+      <h2 class="title">Музыка каждый вечер</h2>
+      <p class="lead">Живая музыка с 19:00 до закрытия, а по выходным — тематические вечера и приглашённые артисты.</p>
+      <img src="assets/img/party-2.webp" alt="" loading="lazy" class="afisha__img">
+    </div>
+    <ul class="gigs">
+      <li class="gig rise"><time><b>01</b>ноя</time><div><h3>Латинская вечеринка с Eduardo Ross</h3><span>Суббота · 20:00 · вход свободный</span></div><a href="#reserve" class="pill pill--line pill--sm">Стол</a></li>
+      <li class="gig rise"><time><b>08</b>ноя</time><div><h3>Восточная ночь: танура и танец живота</h3><span>Суббота · 21:00 · вход свободный</span></div><a href="#reserve" class="pill pill--line pill--sm">Стол</a></li>
+      <li class="gig rise"><time><b>15</b>ноя</time><div><h3>Хиты 90-х: живой вокал и DJ-сет</h3><span>Суббота · 20:00 · вход свободный</span></div><a href="#reserve" class="pill pill--line pill--sm">Стол</a></li>
+      <li class="gig rise"><time><b>31</b>дек</time><div><h3>Новогодняя ночь 2027</h3><span>Банкет, шоу, ведущий · места ограничены</span></div><a href="#reserve" class="pill pill--line pill--sm">Стол</a></li>
     </ul>
   </div>
 </section>
 
-<!-- ========== MARQUEE ========== -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee__track">
-    <span>Шашлык на углях</span><span>Шах-плов с огнём</span><span>Хачапури</span><span>Живая музыка</span><span>Свадьбы</span><span>Юбилеи</span><span>Корпоративы</span>
-    <span>Шашлык на углях</span><span>Шах-плов с огнём</span><span>Хачапури</span><span>Живая музыка</span><span>Свадьбы</span><span>Юбилеи</span><span>Корпоративы</span>
+<!-- ========== ГАЛЕРЕЯ ========== -->
+<section class="sheet sheet--ink gallery" id="gallery">
+  <div class="gallery__head rise">
+    <h2 class="title title--light">Галерея</h2>
+    <div class="chips chips--dark" role="tablist" aria-label="Фильтр галереи">
+      <button class="chip is-on" data-filter="all">Все</button>
+      <button class="chip" data-filter="interior">Интерьер</button>
+      <button class="chip" data-filter="food">Блюда</button>
+      <button class="chip" data-filter="party">Праздники</button>
+    </div>
   </div>
-</div>
+  <div class="mosaic" id="mosaic"></div>
+  <button class="pill pill--glass gallery__more" id="galleryMore">Показать ещё</button>
+</section>
 
-<!-- ========== 02 MENU ========== -->
-<section class="menu section section--dark" id="menu">
-  <div class="container">
-    <div class="section-head section-head--split">
-      <div>
-        <span class="num num--light reveal">02</span>
-        <h2 class="h2 reveal">Меню</h2>
-        <span class="rule reveal"></span>
-      </div>
-      <p class="section-head__text reveal">Сезонные продукты, мясо на открытом огне и рецепты, которые на Кавказе передают из поколения в поколение. Все цены — в рублях, вес — на порцию.</p>
+<!-- ========== ОТЗЫВЫ ========== -->
+<section class="sheet sheet--canvas voices" id="voices">
+  <div class="center-head rise">
+    <h2 class="title">Что говорят гости</h2>
+    <div class="score">
+      <span class="score__big"><svg><use href="#i-star"/></svg>4,4</span>
+      <span>1120 оценок · 480 отзывов на Яндекс Картах</span>
     </div>
+    <ul class="praise" aria-label="За что хвалят">
+      <li>Еда <b>284</b></li><li>Персонал <b>200</b></li><li>Атмосфера <b>136</b></li><li>Музыка <b>109</b></li><li>Живая музыка <b>64</b></li><li>Подача блюд <b>19</b></li>
+    </ul>
+  </div>
 
-    <div class="menu-cats reveal">
-      <button class="menu-cat" data-jump="Шашлык & Гриль"><span class="menu-cat__img"><img src="assets/img/f-assorti.webp" alt="" loading="lazy"></span><span>Шашлык & гриль</span><small>01</small></button>
-      <button class="menu-cat" data-jump="Закуски"><span class="menu-cat__img"><img src="assets/img/f-caprese.webp" alt="" loading="lazy"></span><span>Закуски</span><small>02</small></button>
-      <button class="menu-cat" data-jump="Горячие блюда"><span class="menu-cat__img"><img src="assets/img/f-tabaka.webp" alt="" loading="lazy"></span><span>Горячие блюда</span><small>03</small></button>
-      <button class="menu-cat" data-jump="Супы"><span class="menu-cat__img"><img src="assets/img/f-pumpkin-soup.webp" alt="" loading="lazy"></span><span>Супы</span><small>04</small></button>
-      <button class="menu-cat" data-jump="Десерты"><span class="menu-cat__img"><img src="assets/img/f-sweets.webp" alt="" loading="lazy"></span><span>Десерты</span><small>05</small></button>
+  <div class="quote-stage rise">
+    <button class="round-btn round-btn--line quote-stage__prev" id="qPrev" aria-label="Предыдущий отзыв"><svg><use href="#i-arrow"/></svg></button>
+    <div class="quotes" id="quotes">
+      <blockquote class="quote is-on"><p>От всего сердца благодарим за безупречную организацию нашей свадьбы! Руководитель снял с нас всю предсвадебную тревогу, ведущий — очень душевный человек, а гости до сих пор делятся восторгом от кухни.</p><footer>Дарья Новикова <span>свадьба · Яндекс Карты</span></footer></blockquote>
+      <blockquote class="quote"><p>Отмечали мой юбилей 55 лет. Всем рекомендую шах-плов! Это целое представление — от выноса плова до танцев. Очень интересный диджей: и музыка заводная, и сам поёт!</p><footer>Ирина Ковалькова <span>юбилей · Яндекс Карты</span></footer></blockquote>
+      <blockquote class="quote"><p>С коллегами отмечали корпоратив. Ресторан подарил нам шах-плов — это был просто восторг, необычная подача, огнём. Танец официантов просто супер!</p><footer>Татьяна <span>корпоратив · Яндекс Карты</span></footer></blockquote>
+      <blockquote class="quote"><p>Красивый интерьер и безукоризненное обслуживание создавали атмосферу тепла и уюта. Банкетное меню — очень вкусное, с оригинальной подачей. Плюс умеренный ценник!</p><footer>Сергей Г. <span>семейное торжество · Restoclub</span></footer></blockquote>
+      <blockquote class="quote"><p>Столы красиво сервированы, еда свежая и очень вкусная — особенно шашлыки. Была шоу-программа. Отдельное спасибо администратору Валерии!</p><footer>Марина Ю. <span>юбилей · Restoclub</span></footer></blockquote>
+      <blockquote class="quote"><p>Хороший ресторан. Вкусная еда, внимательный персонал. Прекрасный вид с террасы на пруд. Рекомендую посетить это место.</p><footer>Олеся Кленина <span>юбилей · Restoclub</span></footer></blockquote>
     </div>
-
-    <div class="menu-board reveal">
-      <div class="menu-tabs" id="menuTabs" role="tablist" aria-label="Разделы меню"></div>
-      <div class="menu-list" id="menuList" role="tabpanel"></div>
-    </div>
-    <p class="menu-note">Позиции с пометкой «уточняйте» есть в меню, актуальную цену подскажет официант. Цены могут меняться.</p>
+    <button class="round-btn round-btn--line quote-stage__next" id="qNext" aria-label="Следующий отзыв"><svg><use href="#i-arrow"/></svg></button>
+    <div class="quote-dots" id="qDots" aria-hidden="true"></div>
+  </div>
+  <div class="voices__links rise">
+    <a href="https://yandex.ru/maps/org/bely_gorod/239411113109/reviews/" target="_blank" rel="noopener" class="text-link">Все отзывы на Яндекс Картах <svg><use href="#i-arrow"/></svg></a>
+    <a href="https://www.restoclub.ru/msk/place/belyj-gorod" target="_blank" rel="noopener" class="text-link">Отзывы на Restoclub <svg><use href="#i-arrow"/></svg></a>
   </div>
 </section>
 
-<!-- ========== 03 SIGNATURE ========== -->
-<section class="signature section" id="signature">
-  <div class="container">
-    <div class="section-head section-head--center">
-      <span class="num reveal">03</span>
-      <h2 class="h2 reveal">Фирменные блюда</h2>
-      <span class="rule rule--center reveal"></span>
-      <p class="reveal">То, за чем к нам возвращаются. Каждое блюдо — от мангала до подачи — готовит наш шеф.</p>
+<!-- ========== ДОСТАВКА + ВОПРОСЫ ========== -->
+<section class="pair" id="delivery">
+  <article class="card card--paper delivery rise">
+    <img src="assets/img/f-lamb-lavash.webp" alt="Шашлык на лаваше" loading="lazy" class="delivery__img">
+    <h2 class="title title--sm">Доставка и самовывоз</h2>
+    <p class="lead">Шашлык, плов и хачапури — горячими к вам домой. Доставляем в течение дня.</p>
+    <div class="mini-facts">
+      <span><b>50–300 ₽</b>доставка</span>
+      <span><b>0 ₽</b>мин. заказ</span>
+      <span><b>Самовывоз</b>и кофе с собой</span>
     </div>
+    <div class="row-btns">
+      <a href="https://wa.me/79269269222?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D1%83" target="_blank" rel="noopener" class="pill pill--ink">Заказать в WhatsApp</a>
+      <a href="https://eda.yandex.ru/moscow?shippingType=delivery" target="_blank" rel="noopener" class="pill pill--line">Яндекс Еда</a>
+    </div>
+  </article>
 
-    <div class="sig-grid">
-      <article class="sig sig--wide reveal">
-        <div class="sig__img"><img src="assets/img/show-plov-fire.webp" alt="Шах-плов подают с огнём" loading="lazy"></div>
-        <div class="sig__body">
-          <span class="sig__tag">Шоу-подача</span>
-          <h3>Шах&#8209;плов по&#8209;царски</h3>
-          <p>Плов в хрустящем лаваше, который выносят в огне и разрезают прямо у стола под музыку и танец официантов. Гости называют это «целым представлением».</p>
-          <span class="sig__price">по предзаказу</span>
-        </div>
-      </article>
-      <article class="sig reveal">
-        <div class="sig__img"><img src="assets/img/f-pork-neck.webp" alt="Шашлык из свиной шейки" loading="lazy"></div>
-        <div class="sig__body"><h3>Шашлык из свиной шейки</h3><p>Сочная шея в маринаде, жарится на углях.</p><span class="sig__price">180 г · 990 ₽</span></div>
-      </article>
-      <article class="sig reveal">
-        <div class="sig__img"><img src="assets/img/f-lulya.webp" alt="Люля-кебаб" loading="lazy"></div>
-        <div class="sig__body"><h3>Люля-кебаб из баранины</h3><p>С красным луком и зеленью, подаётся с соусом.</p><span class="sig__price">180 г · 1090 ₽</span></div>
-      </article>
-      <article class="sig reveal">
-        <div class="sig__img"><img src="assets/img/f-tabaka.webp" alt="Цыплёнок табака" loading="lazy"></div>
-        <div class="sig__body"><h3>Цыплёнок табака</h3><p>Хрустящая корочка и пикантный соус.</p><span class="sig__price">350 г · 950 ₽</span></div>
-      </article>
-      <article class="sig reveal">
-        <div class="sig__img"><img src="assets/img/f-plov.webp" alt="Узбекский плов" loading="lazy"></div>
-        <div class="sig__body"><h3>Узбекский плов</h3><p>Говядина, рис, морковь, барбарис и чеснок.</p><span class="sig__price">300 г · 790 ₽</span></div>
-      </article>
+  <article class="card card--paper faq rise" id="faq">
+    <h2 class="title title--sm">Частые вопросы</h2>
+    <div class="faq__list">
+      <details open><summary>Есть ли парковка?</summary><p>Да, у ресторана бесплатная парковка, в том числе места для людей с инвалидностью, и велопарковка.</p></details>
+      <details><summary>Можно со своим алкоголем?</summary><p>Да, действует пробковый сбор. Размер уточняйте у администратора при бронировании.</p></details>
+      <details><summary>Есть халяль и детское меню?</summary><p>Да, у нас халяльная кухня и детское меню. Для гостей есть намазхана.</p></details>
+      <details><summary>Когда живая музыка?</summary><p>Каждый день с 19:00 и до закрытия. По выходным — тематические вечера и шоу.</p></details>
+      <details><summary>Сколько стоит банкет?</summary><p>Банкетное меню — от 3000 ₽ на гостя, до 170 человек в трёх залах. Точную смету составит администратор.</p></details>
+      <details><summary>Как оплатить?</summary><p>Наличными, картой, по QR-коду и СБП, переводом для юрлиц. Чаевые — через Яндекс Чаевые.</p></details>
+      <details><summary>Можно с питомцем?</summary><p>Правила посещения с питомцами уточняйте у администратора при бронировании.</p></details>
     </div>
-  </div>
+  </article>
 </section>
 
-<!-- ========== 04 SETS ========== -->
-<section class="sets section section--blue" id="sets">
-  <div class="container sets__grid">
-    <div class="sets__media reveal">
-      <img src="assets/img/f-grill-veg.webp" alt="Овощи на мангале" loading="lazy" class="sets__img sets__img--a">
-      <img src="assets/img/f-chicken-shashlik.webp" alt="Шашлык из курицы" loading="lazy" class="sets__img sets__img--b">
-      <span class="sets__stamp">с мангала<br><b>на компанию</b></span>
-    </div>
-    <div class="sets__content">
-      <span class="num num--light reveal">04</span>
-      <h2 class="h2 reveal">Наборы на компанию</h2>
-      <span class="rule reveal"></span>
-      <p class="reveal">Мясо разных видов, люля, молодой картофель и овощи с мангала, лаваш, аджика и ткемали — на большой доске, чтобы делить.</p>
-      <ul class="sets__list" id="setsList"></ul>
-      <a href="#booking" class="btn btn--gold reveal">Заказать набор</a>
-    </div>
-  </div>
-</section>
-
-<!-- ========== 05 BANQUETS ========== -->
-<section class="banquets section" id="banquets">
-  <div class="container">
-    <div class="section-head section-head--split">
-      <div>
-        <span class="num reveal">05</span>
-        <h2 class="h2 reveal">Банкеты и события</h2>
-        <span class="rule reveal"></span>
-      </div>
-      <p class="section-head__text reveal">Свадьбы, юбилеи, корпоративы и семейные праздники до 170 гостей. Берём на себя всё: меню, декор, ведущего, музыку и шоу-программу.</p>
-    </div>
-
-    <div class="events-tabs reveal" role="tablist" aria-label="Тип события">
-      <button class="events-tab is-active" data-event="wedding" role="tab" aria-selected="true">Свадьба</button>
-      <button class="events-tab" data-event="birthday" role="tab" aria-selected="false">Юбилей и день рождения</button>
-      <button class="events-tab" data-event="corporate" role="tab" aria-selected="false">Корпоратив</button>
-      <button class="events-tab" data-event="family" role="tab" aria-selected="false">Семейный праздник</button>
-    </div>
-
-    <div class="event reveal" id="eventCard">
-      <div class="event__img"><img id="eventImg" src="assets/img/wed-presidium.webp" alt="Президиум молодожёнов" loading="lazy"></div>
-      <div class="event__body">
-        <h3 id="eventTitle">Свадьба, о которой будут вспоминать</h3>
-        <p id="eventText">Президиум с живыми цветами, троны для молодожёнов, арка и выездная регистрация прямо в ресторане. Ведущий, DJ, первый танец в тяжёлом дыму и лезгинка до утра.</p>
-        <ul class="event__list" id="eventList">
-          <li>Оформление зала и президиума</li><li>Свадебная арка и выездная церемония</li><li>Ведущий и DJ</li><li>Шоу-программа и национальные танцы</li>
-        </ul>
-        <a href="#calc" class="link-arrow">Рассчитать стоимость</a>
-      </div>
-    </div>
-
-    <h3 class="h3 reveal">Залы</h3>
-    <div class="halls">
-      <article class="hall reveal">
-        <img src="assets/img/hall-1.webp" alt="Большой зал" loading="lazy">
-        <div class="hall__body"><h4>Большой зал</h4><p>Мраморный пол, хрустальные люстры, сцена и танцпол.</p><span>до 120 гостей</span></div>
-      </article>
-      <article class="hall reveal">
-        <img src="assets/img/hall-long.webp" alt="Малый зал" loading="lazy">
-        <div class="hall__body"><h4>Малый зал</h4><p>Камерный зал за портьерой — тише, но рядом со всеми.</p><span>до 30 гостей</span></div>
-      </article>
-      <article class="hall reveal">
-        <img src="assets/img/veranda.webp" alt="Летняя веранда" loading="lazy">
-        <div class="hall__body"><h4>Летняя веранда</h4><p>Вид на пруд, свежий воздух и мангал рядом.</p><span>до 40 гостей</span></div>
-      </article>
-    </div>
-
-    <div class="show">
-      <div class="show__text reveal">
-        <h3 class="h3">Шоу-программа</h3>
-        <p>Восточные танцы, огненное шоу танура, лезгинка и египетский танец, DJ, который ещё и поёт. А на десерт — танец официантов и вынос шах-плова в огне.</p>
-        <ul class="ticks">
-          <li>Живая музыка ежедневно с 19:00</li>
-          <li>Ведущий и DJ</li>
-          <li>Украшение зала, арка на свадьбу</li>
-          <li>Можно со своим алкоголем — пробковый сбор</li>
-        </ul>
-      </div>
-      <div class="show__photos">
-        <img src="assets/img/show-tanoura.webp" alt="Шоу танура" loading="lazy" class="reveal">
-        <img src="assets/img/show-dancer.webp" alt="Национальный танец" loading="lazy" class="reveal">
-        <img src="assets/img/show-wedding-dance.webp" alt="Первый танец молодожёнов" loading="lazy" class="reveal">
-      </div>
-    </div>
-
-    <!-- calculator -->
-    <div class="calc reveal" id="calc">
-      <div class="calc__head">
-        <h3 class="h3">Калькулятор банкета</h3>
-        <p>Предварительная стоимость. Точную смету составит администратор.</p>
-      </div>
-      <div class="calc__grid">
-        <div class="calc__controls">
-          <label class="calc__label" for="guests">Количество гостей: <b id="guestsOut">40</b></label>
-          <input type="range" id="guests" min="10" max="170" step="5" value="40">
-          <div class="calc__scale"><span>10</span><span>170</span></div>
-
-          <span class="calc__label">Банкетное меню</span>
-          <div class="packages" role="radiogroup" aria-label="Банкетное меню">
-            <label class="package"><input type="radio" name="pkg" value="3000" checked><span><b>Классика</b><small>3000 ₽ / гость</small></span></label>
-            <label class="package"><input type="radio" name="pkg" value="4500"><span><b>Кавказский стол</b><small>4500 ₽ / гость</small></span></label>
-            <label class="package"><input type="radio" name="pkg" value="6000"><span><b>Царский</b><small>6000 ₽ / гость</small></span></label>
-          </div>
-
-          <span class="calc__label">Дополнительно</span>
-          <div class="extras">
-            <label class="check"><input type="checkbox" value="25000" data-name="Ведущий и DJ"><span>Ведущий и DJ <small>от 25 000 ₽</small></span></label>
-            <label class="check"><input type="checkbox" value="30000" data-name="Оформление зала"><span>Оформление зала <small>от 30 000 ₽</small></span></label>
-            <label class="check"><input type="checkbox" value="20000" data-name="Шоу-программа"><span>Шоу-программа <small>от 20 000 ₽</small></span></label>
-            <label class="check"><input type="checkbox" value="0" data-name="Шах-плов с огнём"><span>Шах-плов с огнём <small>по запросу</small></span></label>
-          </div>
-        </div>
-        <div class="calc__result">
-          <span>Ориентировочно</span>
-          <strong id="calcTotal">120 000 ₽</strong>
-          <small id="calcPer">≈ 3000 ₽ на гостя</small>
-          <a href="#" class="btn btn--gold" id="calcSend" target="_blank" rel="noopener">Отправить заявку в WhatsApp</a>
-          <a href="tel:+79269269222" class="calc__phone">или позвоните: +7 (926) 926-92-22</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== 06 OFFERS ========== -->
-<section class="offers section section--beige" id="offers">
-  <div class="container">
-    <div class="section-head section-head--center">
-      <span class="num reveal">06</span>
-      <h2 class="h2 reveal">Акции и предложения</h2>
-      <span class="rule rule--center reveal"></span>
-    </div>
-    <div class="offers__grid">
-      <article class="offer offer--big reveal">
-        <img src="assets/img/f-steak.webp" alt="" loading="lazy">
-        <div class="offer__body"><span class="offer__tag">Будни 12:00–16:00</span><h3>−20% на всё меню</h3><p>По будням днём — скидка на всё меню ресторана.</p></div>
-      </article>
-      <article class="offer reveal">
-        <img src="assets/img/banq-2.webp" alt="" loading="lazy">
-        <div class="offer__body"><span class="offer__tag">День рождения</span><h3>До −30% на весь счёт</h3><p>За три дня до и три дня после праздника.</p></div>
-      </article>
-      <article class="offer reveal">
-        <img src="assets/img/drink-aperol.webp" alt="" loading="lazy">
-        <div class="offer__body"><span class="offer__tag">Бар</span><h3>Апероль 1+1=3</h3><p>Два коктейля — третий в подарок.</p></div>
-      </article>
-      <article class="offer reveal">
-        <img src="assets/img/bar-man.webp" alt="" loading="lazy">
-        <div class="offer__body"><span class="offer__tag">Соцсети</span><h3>Коктейль в подарок</h3><p>За сторис с отметкой ресторана.</p></div>
-      </article>
-      <article class="offer reveal">
-        <img src="assets/img/banq-1.webp" alt="" loading="lazy">
-        <div class="offer__body"><span class="offer__tag">Банкеты</span><h3>От 3000 ₽ на гостя</h3><p>Банкеты и корпоративы. Подробности — по телефону.</p></div>
-      </article>
-    </div>
-
-    <div class="lunch reveal">
-      <div class="lunch__price"><span>Бизнес-ланч</span><strong>600 ₽</strong><small>Пн–Пт, 12:00–16:00</small></div>
-      <ol class="lunch__steps">
-        <li><b>Салат</b>Овощной или «Цезарь»</li>
-        <li><b>Суп</b>Куриный с лапшой или солянка</li>
-        <li><b>Горячее</b>С гарниром на выбор</li>
-        <li><b>Напиток</b>Морс, чай или кофе</li>
-      </ol>
-    </div>
-
-    <div class="gift reveal">
-      <div class="gift__card" aria-hidden="true">
-        <span class="logo__mark"><i></i><b>BG</b><i></i></span>
-        <span class="gift__name">Подарочный сертификат</span>
-        <span class="gift__sum">5 000 ₽</span>
-      </div>
-      <div class="gift__text">
-        <h3 class="h3">Подарочный сертификат</h3>
-        <p>Лучший подарок — вечер в «Белом городе». Номиналы 3 000, 5 000 и 10 000 ₽ или любая сумма. Оформим в красивом конверте.</p>
-        <a href="https://wa.me/79269269222?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D0%B0%D1%80%D0%BE%D1%87%D0%BD%D1%8B%D0%B9%20%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82" class="link-arrow" target="_blank" rel="noopener">Заказать сертификат</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== 07 AFISHA ========== -->
-<section class="afisha section section--dark" id="afisha">
-  <div class="container afisha__grid">
-    <div class="afisha__media reveal">
-      <img src="assets/img/promo-music.webp" alt="Живая музыка ежедневно" loading="lazy">
-    </div>
-    <div>
-      <span class="num num--light reveal">07</span>
-      <h2 class="h2 reveal">Афиша</h2>
-      <span class="rule reveal"></span>
-      <p class="reveal">Живая музыка каждый день с 19:00 до закрытия, а по выходным — тематические вечера и приглашённые артисты.</p>
-      <ul class="events-list">
-        <li class="reveal"><time><b>01</b>ноя</time><div><h4>Латинская вечеринка с Eduardo Ross</h4><span>Сб · 20:00 · вход свободный</span></div><a href="#booking" class="link-arrow">Стол</a></li>
-        <li class="reveal"><time><b>08</b>ноя</time><div><h4>Восточная ночь: шоу танура и танец живота</h4><span>Сб · 21:00 · вход свободный</span></div><a href="#booking" class="link-arrow">Стол</a></li>
-        <li class="reveal"><time><b>15</b>ноя</time><div><h4>Хиты 90-х: живой вокал и DJ-сет</h4><span>Сб · 20:00 · вход свободный</span></div><a href="#booking" class="link-arrow">Стол</a></li>
-        <li class="reveal"><time><b>31</b>дек</time><div><h4>Новогодняя ночь 2027</h4><span>Банкет, шоу-программа, ведущий · места ограничены</span></div><a href="#booking" class="link-arrow">Стол</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ========== 08 GALLERY ========== -->
-<section class="gallery section" id="gallery">
-  <div class="container">
-    <div class="section-head section-head--split">
-      <div>
-        <span class="num reveal">08</span>
-        <h2 class="h2 reveal">Галерея</h2>
-        <span class="rule reveal"></span>
-      </div>
-      <div class="gallery-filters reveal" role="tablist" aria-label="Фильтр галереи">
-        <button class="chip is-active" data-filter="all">Все</button>
-        <button class="chip" data-filter="interior">Интерьер</button>
-        <button class="chip" data-filter="food">Блюда</button>
-        <button class="chip" data-filter="party">Праздники</button>
-      </div>
-    </div>
-    <div class="masonry" id="masonry"></div>
-    <button class="btn btn--outline gallery__more" id="galleryMore">Показать ещё</button>
-  </div>
-</section>
-
-<!-- ========== 09 REVIEWS ========== -->
-<section class="reviews section section--beige" id="reviews">
-  <div class="container">
-    <div class="section-head section-head--center">
-      <span class="num reveal">09</span>
-      <h2 class="h2 reveal">Отзывы гостей</h2>
-      <span class="rule rule--center reveal"></span>
-    </div>
-
-    <div class="rating reveal">
-      <div class="rating__score">
-        <strong>4,4</strong>
-        <span class="stars" aria-hidden="true">★★★★★</span>
-        <small>1120 оценок и 480 отзывов на Яндекс Картах</small>
-      </div>
-      <div class="rating__bars">
-        <p class="rating__caption">За что хвалят — число положительных отзывов</p>
-        <div class="bar"><span>Еда</span><i style="--v:1"></i><b>284</b></div>
-        <div class="bar"><span>Персонал</span><i style="--v:.70"></i><b>200</b></div>
-        <div class="bar"><span>Атмосфера</span><i style="--v:.48"></i><b>136</b></div>
-        <div class="bar"><span>Музыка</span><i style="--v:.38"></i><b>109</b></div>
-        <div class="bar"><span>Живая музыка</span><i style="--v:.23"></i><b>64</b></div>
-        <div class="bar"><span>Подача блюд</span><i style="--v:.07"></i><b>19</b></div>
-      </div>
-    </div>
-
-    <div class="slider reveal">
-      <div class="slider__track" id="reviewsTrack">
-        <blockquote class="review"><p>От всего сердца благодарим за безупречную организацию нашей свадьбы! Отдельную благодарность — руководителю: его отзывчивость и внимательность к деталям сняли с нас всю предсвадебную тревогу. Ведущий — очень душевный человек, блюда невероятно вкусные, гости до сих пор делятся восторгом от кухни.</p><footer><b>Дарья Новикова</b><span>Свадьба · Яндекс Карты</span></footer></blockquote>
-        <blockquote class="review"><p>Отмечали мой юбилей 55 лет. Всем гостям всё очень понравилось — и еда, и обслуживание! Спасибо официанту Санану. Всем рекомендую шах-плов! Это целое представление, начиная от выноса плова и заканчивая танцами. Очень интересный диджей — и музыка заводная, и сам поёт!</p><footer><b>Ирина Ковалькова</b><span>Юбилей · Яндекс Карты</span></footer></blockquote>
-        <blockquote class="review"><p>С коллегами отмечали корпоратив. Администрация организовала замечательную анимацию, диджей провёл вечер на высоте. От лица ресторана подарили шах-плов — это был просто восторг, необычная подача, огнём. Танец официантов просто супер, рекомендую!</p><footer><b>Татьяна</b><span>Корпоратив · Яндекс Карты</span></footer></blockquote>
-        <blockquote class="review"><p>Красивый интерьер в сочетании с безукоризненным обслуживанием официантов создавали атмосферу тепла и уюта. Банкетное меню оказалось не только очень вкусным, но и отличалось оригинальной подачей. Такой шах-плов, как в «Белом городе», я попробовал впервые. Плюс — умеренный ценник!</p><footer><b>Сергей Г.</b><span>Семейное торжество · Restoclub</span></footer></blockquote>
-        <blockquote class="review"><p>Выражаю благодарность всему коллективу за прекрасную атмосферу и обслуживание. Столы красиво сервированы, еда свежая и очень вкусная (особенно шашлыки), была шоу-программа. Отдельное спасибо администратору Валерии!</p><footer><b>Марина Ю.</b><span>Юбилей · Restoclub</span></footer></blockquote>
-        <blockquote class="review"><p>Хороший ресторан. Вкусная еда, внимательный персонал. Гуляли на юбилее в октябре. Прекрасный вид с террасы на пруд. Рекомендую посетить это место.</p><footer><b>Олеся Кленина</b><span>Юбилей · Restoclub</span></footer></blockquote>
-      </div>
-      <div class="slider__nav">
-        <button class="slider__btn" id="revPrev" aria-label="Предыдущий отзыв">←</button>
-        <button class="slider__btn" id="revNext" aria-label="Следующий отзыв">→</button>
-      </div>
-    </div>
-    <div class="reviews__links reveal">
-      <a href="https://yandex.ru/maps/org/bely_gorod/239411113109/reviews/" target="_blank" rel="noopener" class="link-arrow">Все отзывы на Яндекс Картах</a>
-      <a href="https://www.restoclub.ru/msk/place/belyj-gorod" target="_blank" rel="noopener" class="link-arrow">Отзывы на Restoclub</a>
-    </div>
-  </div>
-</section>
-
-<!-- ========== 10 DELIVERY ========== -->
-<section class="delivery section" id="delivery">
-  <div class="container delivery__grid">
-    <div>
-      <span class="num reveal">10</span>
-      <h2 class="h2 reveal">Доставка и самовывоз</h2>
-      <span class="rule reveal"></span>
-      <p class="reveal">Шашлык, плов и хачапури — горячими к вам домой. Доставляем в течение дня, без минимальной суммы заказа.</p>
-      <div class="delivery__cards">
-        <div class="dcard reveal"><b>50–300 ₽</b><span>стоимость доставки</span></div>
-        <div class="dcard reveal"><b>0 ₽</b><span>минимальный заказ</span></div>
-        <div class="dcard reveal"><b>Самовывоз</b><span>и кофе с собой</span></div>
-      </div>
-      <div class="delivery__links reveal">
-        <a href="https://eda.yandex.ru/moscow?shippingType=delivery" target="_blank" rel="noopener" class="btn btn--outline">Яндекс Еда</a>
-        <a href="https://wa.me/79269269222?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D1%83" target="_blank" rel="noopener" class="btn btn--gold">Заказать через WhatsApp</a>
-      </div>
-    </div>
-    <div class="delivery__img reveal">
-      <img src="assets/img/f-lamb-lavash.webp" alt="Шашлык на лаваше" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<!-- ========== 11 BOOKING ========== -->
-<section class="booking" id="booking">
-  <div class="booking__bg" style="background-image:url(assets/img/wed-table-5.webp)"></div>
-  <div class="container booking__grid">
-    <div class="booking__intro">
-      <span class="num num--light reveal">11</span>
-      <h2 class="h2 reveal">Ваш стол<br>ждёт вас</h2>
-      <span class="rule reveal"></span>
-      <p class="reveal">Оставьте заявку — администратор перезвонит, подтвердит бронь и поможет с меню. Бронирование бесплатное.</p>
-      <a href="tel:+79269269222" class="booking__phone reveal">+7 (926) 926-92-22</a>
-      <div class="socials reveal">
-        <a href="https://wa.me/79269269222" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="https://t.me/beliygorodrest" target="_blank" rel="noopener">Telegram</a>
-        <a href="https://vk.ru/belyygorod" target="_blank" rel="noopener">ВКонтакте</a>
-      </div>
-    </div>
-    <form class="form reveal" id="bookingForm" novalidate>
-      <div class="form__row">
-        <label class="field"><span>Имя</span><input type="text" name="name" required autocomplete="name" placeholder="Как к вам обращаться"></label>
-        <label class="field"><span>Телефон</span><input type="tel" name="phone" required autocomplete="tel" placeholder="+7 (___) ___-__-__"></label>
-      </div>
-      <div class="form__row form__row--3">
-        <label class="field"><span>Дата</span><input type="date" name="date" required></label>
-        <label class="field"><span>Время</span><select name="time" id="timeSelect"></select></label>
-        <label class="field"><span>Гостей</span><input type="number" name="guests" min="1" max="170" value="2"></label>
-      </div>
+<!-- ========== БРОНЬ ========== -->
+<section class="sheet sheet--ink reserve" id="reserve">
+  <div class="reserve__bg" style="background-image:url(assets/img/hall-teal.webp)" aria-hidden="true"></div>
+  <form class="reserve__card rise" id="bookingForm" novalidate>
+    <h2 class="title">Забронируйте стол</h2>
+    <p class="lead">Администратор перезвонит, подтвердит бронь и поможет с меню. Бронирование бесплатное.</p>
+    <div class="fields">
+      <label class="field"><span>Имя</span><input type="text" name="name" required autocomplete="name" placeholder="Как к вам обращаться"></label>
+      <label class="field"><span>Телефон</span><input type="tel" name="phone" required autocomplete="tel" placeholder="+7 (___) ___-__-__"></label>
+      <label class="field"><span>Дата</span><input type="date" name="date" required></label>
+      <label class="field"><span>Время</span><select name="time" id="timeSelect"></select></label>
+      <label class="field"><span>Гостей</span><input type="number" name="guests" min="1" max="170" value="2"></label>
       <label class="field"><span>Повод</span>
-        <select name="occasion">
-          <option>Ужин</option><option>День рождения</option><option>Юбилей</option><option>Свадьба</option><option>Корпоратив</option><option>Деловая встреча</option><option>Свидание</option><option>Другое</option>
-        </select>
+        <select name="occasion"><option>Ужин</option><option>День рождения</option><option>Юбилей</option><option>Свадьба</option><option>Корпоратив</option><option>Деловая встреча</option><option>Свидание</option><option>Другое</option></select>
       </label>
-      <label class="field"><span>Пожелания</span><textarea name="comment" rows="2" placeholder="Например: стол у окна, детский стульчик"></textarea></label>
-      <button class="btn btn--gold btn--block" type="submit">Забронировать</button>
-      <p class="form__note">Заявка откроется в WhatsApp — останется только нажать «Отправить».</p>
-    </form>
-  </div>
-</section>
-
-<!-- ========== 12 FAQ ========== -->
-<section class="faq section" id="faq">
-  <div class="container faq__grid">
-    <div>
-      <span class="num reveal">12</span>
-      <h2 class="h2 reveal">Частые вопросы</h2>
-      <span class="rule reveal"></span>
-      <p class="reveal">Не нашли ответ — напишите нам в <a href="https://wa.me/79269269222" target="_blank" rel="noopener">WhatsApp</a> или <a href="https://t.me/beliygorodrest" target="_blank" rel="noopener">Telegram</a>.</p>
+      <label class="field field--wide"><span>Пожелания</span><input type="text" name="comment" placeholder="Стол у окна, детский стульчик…"></label>
     </div>
-    <div class="accordion">
-      <details class="reveal" open><summary>Есть ли парковка?</summary><p>Да, у ресторана бесплатная парковка для гостей, в том числе места для людей с инвалидностью, и велопарковка.</p></details>
-      <details class="reveal"><summary>Можно прийти со своим алкоголем?</summary><p>Да, действует пробковый сбор. Размер уточняйте у администратора при бронировании.</p></details>
-      <details class="reveal"><summary>Есть ли халяльные блюда и детское меню?</summary><p>Да, у нас халяльная кухня и детское меню. Для гостей есть намазхана.</p></details>
-      <details class="reveal"><summary>Во сколько начинается живая музыка?</summary><p>Каждый день с 19:00 и до закрытия. По выходным — тематические вечера и шоу-программа.</p></details>
-      <details class="reveal"><summary>Сколько стоит банкет?</summary><p>Банкетное меню — от 3000 ₽ на гостя. Вместимость — до 170 человек в трёх залах. Точную смету составит администратор.</p></details>
-      <details class="reveal"><summary>Как можно оплатить?</summary><p>Наличными, картой, по QR-коду и СБП, банковским переводом для юрлиц. Чаевые — через Яндекс Чаевые.</p></details>
-      <details class="reveal"><summary>Можно ли с животными?</summary><p>Правила посещения с питомцами уточняйте у администратора при бронировании.</p></details>
-    </div>
-  </div>
-</section>
-
-<!-- ========== 13 CONTACTS ========== -->
-<section class="contacts section section--blue" id="contacts">
-  <div class="container contacts__grid">
-    <div class="contacts__info">
-      <span class="num num--light reveal">13</span>
-      <h2 class="h2 reveal">Контакты</h2>
-      <span class="rule reveal"></span>
-      <dl class="contacts__list">
-        <div class="reveal"><dt>Адрес</dt><dd>Москва, Петрозаводская ул., 1</dd></div>
-        <div class="reveal"><dt>Метро</dt><dd><i class="metro"></i>Беломорская — 1,9 км<br><i class="metro"></i>Речной вокзал — 2,1 км<br><i class="metro"></i>Ховрино — 2,2 км</dd></div>
-        <div class="reveal"><dt>Телефон</dt><dd><a href="tel:+79269269222">+7 (926) 926-92-22</a></dd></div>
-        <div class="reveal"><dt>Часы работы</dt><dd>Пн–Чт, Вс: 11:00 — 00:00<br>Пт–Сб: 11:00 — 03:00</dd></div>
-      </dl>
-      <div class="socials reveal">
-        <a href="https://wa.me/79269269222" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="https://t.me/beliygorodrest" target="_blank" rel="noopener">Telegram</a>
-        <a href="https://vk.ru/belyygorod" target="_blank" rel="noopener">ВКонтакте</a>
-        <a href="https://vk.ru/beliygorod.rest" target="_blank" rel="noopener">VK — банкеты</a>
-      </div>
-      <a href="https://yandex.ru/maps/org/bely_gorod/239411113109/?rtext=~55.863496%2C37.502296" target="_blank" rel="noopener" class="btn btn--gold reveal">Построить маршрут</a>
-    </div>
-    <div class="contacts__map reveal">
-      <iframe src="https://yandex.ru/map-widget/v1/?ll=37.502296%2C55.863496&z=16&pt=37.502296%2C55.863496%2Cpm2blm" title="Белый город на Яндекс Картах" loading="lazy" allowfullscreen></iframe>
-    </div>
-  </div>
+    <button class="pill pill--ink pill--wide" type="submit">Отправить заявку</button>
+    <p class="muted reserve__note">Заявка откроется в WhatsApp — останется нажать «Отправить». Или звоните: <a href="tel:+79269269222">+7 (926) 926-92-22</a></p>
+  </form>
 </section>
 
 </main>
 
-<!-- ========== FOOTER ========== -->
-<footer class="footer">
-  <div class="container footer__grid">
-    <div>
-      <a href="#top" class="logo logo--footer">
-        <span class="logo__mark" aria-hidden="true"><i></i><b>BG</b><i></i></span>
-        <span class="logo__text">Белый город<small>ресторан</small></span>
-      </a>
-      <p class="footer__tag">Вкус. Праздник. Гостеприимство.</p>
+<!-- ========== ПОДВАЛ ========== -->
+<footer class="sheet sheet--paper footer" id="contacts">
+  <div class="footer__cols">
+    <div class="footer__col">
+      <a href="#top" class="emblem emblem--dark"><span class="emblem__mark">Б<i>Г</i></span><span class="emblem__name">Белый город</span></a>
+      <p class="muted">Ресторан и банкетный зал на севере Москвы. Кавказская, европейская и русская кухня.</p>
+      <div class="socials">
+        <a href="https://wa.me/79269269222" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+        <a href="https://t.me/beliygorodrest" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#i-tg"/></svg></a>
+        <a href="https://vk.ru/belyygorod" target="_blank" rel="noopener" aria-label="ВКонтакте"><svg><use href="#i-vk"/></svg></a>
+      </div>
     </div>
-    <nav class="footer__nav" aria-label="Навигация в подвале">
-      <a href="#menu">Меню</a><a href="#banquets">Банкеты</a><a href="#offers">Акции</a><a href="#afisha">Афиша</a><a href="#delivery">Доставка</a><a href="#contacts">Контакты</a>
-    </nav>
-    <div class="footer__contacts">
-      <a href="tel:+79269269222">+7 (926) 926-92-22</a>
-      <span>Москва, Петрозаводская ул., 1</span>
-      <span>Ежедневно с 11:00</span>
+    <div class="footer__col">
+      <h3>Как добраться</h3>
+      <p>Москва, Петрозаводская ул., 1</p>
+      <p class="muted"><i class="metro"></i>Беломорская — 1,9 км<br><i class="metro"></i>Речной вокзал — 2,1 км<br><i class="metro"></i>Ховрино — 2,2 км</p>
+      <a href="https://yandex.ru/maps/org/bely_gorod/239411113109/?rtext=~55.863496%2C37.502296" target="_blank" rel="noopener" class="text-link">Построить маршрут <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="footer__col">
+      <h3>Часы и телефон</h3>
+      <p>Пн–Чт, Вс: 11:00 — 00:00<br>Пт–Сб: 11:00 — 03:00</p>
+      <a href="tel:+79269269222" class="footer__phone">+7 (926) 926-92-22</a>
+      <p class="muted">Банкеты: <a href="https://vk.ru/beliygorod.rest" target="_blank" rel="noopener">vk.ru/beliygorod.rest</a></p>
+    </div>
+    <div class="footer__map">
+      <iframe src="https://yandex.ru/map-widget/v1/?ll=37.502296%2C55.863496&z=16&pt=37.502296%2C55.863496%2Cpm2blm" title="Белый город на Яндекс Картах" loading="lazy" allowfullscreen></iframe>
     </div>
   </div>
-  <div class="container footer__bottom">
+  <div class="footer__bottom">
     <span>© <span id="year">2026</span> Ресторан «Белый город»</span>
     <span>Цены и наличие блюд уточняйте у администратора</span>
   </div>
 </footer>
 
-<!-- mobile CTA -->
-<div class="mobile-cta">
-  <a href="tel:+79269269222">Позвонить</a>
-  <a href="https://wa.me/79269269222" target="_blank" rel="noopener">WhatsApp</a>
-  <a href="#booking" class="is-accent">Бронь</a>
-</div>
+<!-- быстрые действия на телефоне -->
+<nav class="dock" aria-label="Быстрые действия">
+  <a href="tel:+79269269222"><svg><use href="#i-phone"/></svg>Звонок</a>
+  <a href="https://wa.me/79269269222" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+  <a href="#reserve" class="dock__main">Бронь</a>
+</nav>
 
-<!-- lightbox -->
+<!-- просмотр фото -->
 <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Просмотр фото">
-  <button class="lightbox__close" aria-label="Закрыть">×</button>
-  <button class="lightbox__prev" aria-label="Предыдущее фото">←</button>
+  <button class="round-btn lightbox__close" aria-label="Закрыть"><svg><use href="#i-plus"/></svg></button>
+  <button class="round-btn lightbox__prev" aria-label="Предыдущее фото"><svg><use href="#i-arrow"/></svg></button>
   <img alt="">
-  <button class="lightbox__next" aria-label="Следующее фото">→</button>
+  <button class="round-btn lightbox__next" aria-label="Следующее фото"><svg><use href="#i-arrow"/></svg></button>
 </div>
 
 <script src="assets/js/menu-data.js"></script>
